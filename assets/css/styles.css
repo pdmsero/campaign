@@ -10,127 +10,266 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 2rem;
+    padding-top: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 /* Navigation */
 .nav {
-    background: rgba(255, 255, 255, 0.9);
+    background: white;
     padding: 1rem 2rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.nav a {
+.nav-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-campaign {
     color: #333;
     text-decoration: none;
-    margin: 0 1.5rem;
     font-weight: 500;
-    transition: background-color 0.3s, color 0.3s;
+    font-size: 0.9rem;
     padding: 0.5rem 1rem;
     border-radius: 4px;
 }
 
-.nav a:hover {
-    background-color: rgba(200, 200, 200, 0.5);
-    color: #000;
+.nav > a:first-child {
+    position: static; /* Remove absolute positioning */
 }
 
-.nav a:visited {
+.nav-logo {
+    height: 32px;
+}
+
+.nav-link {
     color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
 }
 
-/* Main content */
-.main-content {
-    max-width: 800px;
-    margin: 3rem auto;
-}
-
-/* Cards and sections */
-.policy-card, .data-card {
-    background: #f5f5f5;
-    padding: 1.5rem;
-    margin: 1rem 0;
-    border-radius: 8px;
-}
-
-.stat-box {
-    text-align: center;
-    margin: 1.5rem 0;
-}
-
-.stat {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #0066cc;
-}
-
-/* Timeline */
-.timeline {
-    margin: 2rem 0;
-    padding-left: 2rem;
-    border-left: 2px solid #0066cc;
-}
-
-.timeline-item {
-    margin-bottom: 2rem;
-    position: relative;
-}
-
-.timeline-item::before {
-    content: '';
-    width: 12px;
-    height: 12px;
-    background: #0066cc;
-    border-radius: 50%;
-    position: absolute;
-    left: -2.6rem;
-    top: 0.5rem;
-}
-
-/* Buttons and CTAs */
-.button {
-    background: #007bff;
-    color: white;
-    padding: 0.5rem 1.5rem;
+.nav-button {
+    background: #00ffa9;
+    color: black;
+    padding: 0.5rem 1rem;
     border-radius: 4px;
     text-decoration: none;
-    font-weight: bold;
-}
-
-.button:hover {
-    background: #0056b3;
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-left: 1rem;
 }
 
 /* Typography */
+header {
+    margin-bottom: 3rem;
+}
+
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 0.5rem;
 }
 
 h2 {
     font-size: 2rem;
-    margin: 2rem 0 1rem;
+    margin-top: 0;
 }
 
-h3 {
+.section {
+    margin-bottom: 3rem;
+}
+
+.section h3 {
     font-size: 1.5rem;
-    margin: 1.5rem 0 1rem;
+    margin-bottom: 1rem;
+}
+
+.action-card h4,
+.statement-card h4 {
+    margin-top: 0;
+}
+
+/* Achievements */
+.achievements ul {
+    list-style: none;
+    padding: 0;
+}
+
+.achievements li {
+    margin-bottom: 0.5rem;
+}
+
+/* Media Grid */
+.media-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.media-item {
+    border: 1px solid #eaeaea;
+    padding: 1.5rem;
+}
+
+.media-item h4 {
+    margin-top: 0;
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Links */
+.link {
+    color: #0066cc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.go-to-source {
+    display: block;
+    margin-top: 1rem;
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Campaign List */
+.campaign-list {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.campaign-item {
+    border: 1px solid #eaeaea;
+    padding: 1.5rem;
+}
+
+.campaign-item h4 {
+    margin-top: 0;
+}
+
+/* Additional Card Styles */
+.data-card,
+.action-card,
+.policy-card,
+.statement-card {
+    border: 1px solid #eaeaea;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Stats */
+.stat-box {
+    margin: 1.5rem 0;
+}
+
+.stat {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00ffa9;
+    margin-bottom: 0.5rem;
+}
+
+/* Lists */
+.data-card ul,
+.policy-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.data-card li,
+.policy-card li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.data-card li:before,
+.policy-card li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #00ffa9;
 }
 
 /* Quotes */
+.expert-quotes,
+.quote-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
 blockquote {
-    border-left: 4px solid #0066cc;
-    margin: 1.5rem 0;
-    padding-left: 1rem;
+    margin: 0;
+    padding: 1.5rem;
+    border: 1px solid #eaeaea;
     font-style: italic;
 }
 
 cite {
     display: block;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     font-style: normal;
-    color: #666;
-}   
+    font-weight: 500;
+}
+
+/* Timeline */
+.timeline {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.timeline-item {
+    border: 1px solid #eaeaea;
+    padding: 1.5rem;
+}
+
+.timeline-item h4 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.timeline-item p {
+    margin: 0.5rem 0 0 0;
+}
+
+/* Hover states */
+.nav-link:hover,
+.nav-button:hover {
+    opacity: 0.8;
+}
+
+.link:hover,
+.go-to-source:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+    .nav-campaign {
+        margin-left: 2rem;
+    }
+}

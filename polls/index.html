@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polling Data | Control AI</title>
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            color: #1a1a1a;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 5rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+        .nav {
+            background: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .nav-logo {
+            position: absolute;
+            left: 2rem;
+            height: 32px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        
+        .nav-button {
+            background: #00ffa9;
+            color: black;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-left: 1rem;
+        }
+        
+        header {
+            margin-bottom: 3rem;
+        }
+        h1 {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-top: 0;
+        }
+        .section {
+            margin-bottom: 3rem;
+        }
+        .section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .data-card {
+            border: 1px solid #eaeaea;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-box {
+            margin: 1.5rem 0;
+        }
+
+        .stat {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #00ffa9;
+            margin-bottom: 0.5rem;
+        }
+
+        .data-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .data-card li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .data-card li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #00ffa9;
+        }
+
+        .expert-quotes {
+            display: grid;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        blockquote {
+            margin: 0;
+            padding: 1.5rem;
+            border: 1px solid #eaeaea;
+            font-style: italic;
+        }
+
+        cite {
+            display: block;
+            margin-top: 1rem;
+            font-style: normal;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <img src="../assets/images/logo.png" alt="Control AI" class="nav-logo">
+        <div class="nav-links">
+            <a href="../statement/index.html" class="nav-link">STATEMENT</a>
+            <a href="../policies/index.html" class="nav-link">OUR POLICIES</a>
+            <a href="../polls/index.html" class="nav-link">OUR POLLS</a>
+            <a href="../join.html" class="nav-button">JOIN THE CAMPAIGN</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>DEC 2024 - PRESENT</h1>
+            <h2>Polling Data</h2>
+        </header>
+
+        <div class="section">
+            <h3>Public Sentiment</h3>
+            <div class="data-card">
+                <h3>Support for AI Regulation</h3>
+                <div class="stat-box">
+                    <div class="stat">76%</div>
+                    <p>of UK public supports stronger AI regulation</p>
+                </div>
+                <div class="stat-box">
+                    <div class="stat">82%</div>
+                    <p>want independent oversight of AI development</p>
+                </div>
+            </div>
+
+            <div class="data-card">
+                <h3>Key Concerns</h3>
+                <ul>
+                    <li>AI Safety and Control: 84%</li>
+                    <li>Job Displacement: 72%</li>
+                    <li>Privacy and Data Protection: 68%</li>
+                    <li>Algorithmic Bias: 65%</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Expert Survey Results</h3>
+            <div class="expert-quotes">
+                <blockquote>
+                    "Current voluntary commitments are insufficient for ensuring safe AI development."
+                    <cite>- AI Safety Researcher</cite>
+                </blockquote>
+                <blockquote>
+                    "We need clear regulatory frameworks to guide responsible innovation."
+                    <cite>- Technology Policy Expert</cite>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
